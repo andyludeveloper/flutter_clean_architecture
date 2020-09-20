@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../../../../fixtures/fixture_reader.dart';
 
 void main() {
-  final tNumberTriviaModel = NumberTriviaModel(number: 1, text: 'Test Text');
+  final tNumberTriviaModel = NumberTriviaModel(number: 1, text: 'Test text');
   test('should be subclass of NumberTrivia entity', () async {
     expect(tNumberTriviaModel, isA<NumberTrivia>());
   });
@@ -36,6 +36,7 @@ void main() {
       expect(result, tNumberTriviaModel);
     });
   });
+
   group('toJson', () {
     test('should return a JSON map containing the proper data', () {
       //act
@@ -43,7 +44,7 @@ void main() {
 
       final expectedMap = {"text": "Test text", "number": 1};
       //result
-      expect(result, expectedMap);
+      expect(result.toString(), expectedMap.toString());
     });
   });
 }
