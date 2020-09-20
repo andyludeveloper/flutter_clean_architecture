@@ -4,7 +4,7 @@ class NumberTriviaModel extends NumberTrivia {
   NumberTriviaModel({int number, String text});
 
   factory NumberTriviaModel.fromJson(Map<String, dynamic> input) {
-    final int number = input['number'];
+    final int number = input['number'].toInt();
     final String text = input['text'];
     return NumberTriviaModel(number: number, text: text);
   }
